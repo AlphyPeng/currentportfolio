@@ -176,6 +176,22 @@ header {
   }
 
   .project-details {
+    .work {
+      transition: opacity 1s ease;
+    }
+
+    .row.hidden {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      display: none;
+    }
+
+    .row.visible {
+      opacity: 1;
+      height: auto;
+    }
+
     .col-height {
       height: 600px;
 
@@ -256,18 +272,36 @@ header {
   }
 }
 
-.work {
-  transition: opacity 1s ease;
-}
+// @media only screen and (min-width: 992px) {
+.contact {
+  .details h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    line-height: 1;
+    color: $primary-color;
+  }
 
-.row.hidden {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-  display: none;
-}
+  .contant-details {
+    background: $semi-dark;
+    padding: 10px 0 10px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
 
-.row.visible {
-  opacity: 1;
-  height: auto;
+    .text {
+      font-family: "Manrope", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-size: 20px;
+
+      i {
+        color: $primary-color;
+      }
+
+      span {
+        color: $green;
+      }
+    }
+  }
 }
